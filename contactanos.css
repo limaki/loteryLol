@@ -1,0 +1,182 @@
+/* Estilo Global basado en styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Contenedor Principal */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Navegación */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Sección Contacto */
+.contact-section {
+    padding: 120px 20px; /* Añadir espacio extra arriba y abajo */
+    text-align: center;
+    background-color: #1b1b1b; /* Fondo similar a otras secciones */
+}
+
+.contact-section h2 {
+    font-size: 40px;
+    color: #ffdd33; /* Título del formulario en amarillo */
+    margin-bottom: 40px;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #333; /* Fondo del formulario */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra alrededor del formulario */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #ffdd33; /* Etiquetas en amarillo */
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #202020; /* Fondo oscuro para los campos */
+    color: #ffffff; /* Texto en blanco */
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border: 2px solid #ffdd33; /* Resaltar campos activos */
+}
+
+.form-textarea {
+    height: 150px;
+    resize: none; /* Deshabilitar redimensionamiento */
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffdd33;
+    color: #121212;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.form-button:hover {
+    background-color: #e6c300; /* Efecto hover en el botón */
+    transform: translateY(-2px);
+}
+
+/* Mensajes de éxito o error */
+#status-message {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #222;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icon-link {
+    color: #ffdd33; /* Íconos de redes sociales en amarillo */
+    font-size: 24px;
+    margin: 0 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icon-link:hover {
+    color: #e6c300;
+    transform: scale(1.2);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .form-input, .form-textarea {
+        font-size: 14px;
+    }
+
+    .form-button {
+        font-size: 16px;
+    }
+
+    .footer-icons {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-button {
+        font-size: 14px;
+    }
+
+    .icon-link {
+        font-size: 20px;
+        margin: 10px;
+    }
+}

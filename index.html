@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gana Grandes Premios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="toggle.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Navegación -->
+<!-- Header Navegación -->
+<header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <img src="assets/money.avif" alt="Logo" class="logo-image">
+            <span class="logo-text">Juego de Dinero</span>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html #features">Cómo Jugar</a></li>
+                <li><a href="index.html #prizes">Premios</a></li>
+                <li><a href="index.html #video-section">Descubre Más</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="close-menu" id="close-menu">
+                <i class="fas fa-times"></i> <!-- Ícono de cerrar -->
+            </div>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i> <!-- Ícono de abrir menú -->
+        </div>
+    </div>
+</header>
+
+
+<!-- Agrega más contenido aquí si es necesario -->
+
+
+
+    <!-- Sección Hero con video -->
+    <section id="hero" class="hero">
+        <video src="assets/I Filled A Swimming Pool With Money!.mp4" autoplay loop muted class="hero-video"></video>
+        <div class="hero-overlay">
+            <h1 class="hero-title">¡Conviértete en millonario!</h1>
+            <p class="hero-subtitle">Participa ahora y podrías ganar <span class="highlight">400 millones de pesos</span></p>
+            <a href="contactos.html"><button class="cta-button">Jugar Ahora</button></a>
+        </div>
+    </section>
+
+    <!-- Sección de características con Tablas -->
+    <section id="features" class="features">
+        <h2 class="section-title">Cómo Jugar</h2>
+        <div class="tables">
+            <table class="styled-table enhanced-table">
+                <thead>
+                    <tr>
+                        <th>Paso</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Compra tu boleto en línea desde nuestro sitio web.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Elige tus números de la suerte y confirma tu boleto.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Espera los resultados del sorteo y revisa si ganaste.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="styled-table enhanced-table">
+                <thead>
+                    <tr>
+                        <th>Beneficio</th>
+                        <th>Detalles</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Oportunidades de ganar</td>
+                        <td>Cada boleto aumenta tus posibilidades de ganar uno de nuestros grandes premios.</td>
+                    </tr>
+                    <tr>
+                        <td>Premios garantizados</td>
+                        <td>Incluso si no ganas el premio mayor, hay premios garantizados para cada boleto.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Sección de premios con galería -->
+    <section id="prizes" class="prizes">
+        <h2 class="section-title">Premios Increíbles</h2>
+        <div class="prizes-grid">
+            <div class="prize-item">
+                <img src="assets/auto.jpg" alt="Auto de lujo" class="prize-image">
+                <p class="prize-description">Autos de lujo</p>
+            </div>
+            <div class="prize-item">
+                <img src="assets/avion.jpg" alt="Avión privado" class="prize-image">
+                <p class="prize-description">Aviones privados</p>
+            </div>
+            <div class="prize-item">
+                <img src="assets/casa.jpg" alt="Casa de lujo" class="prize-image">
+                <p class="prize-description">Casas exclusivas</p>
+            </div>
+            <div class="prize-item">
+                <img src="assets/money.jpeg" alt="Dinero en efectivo" class="prize-image">
+                <p class="prize-description">Grandes sumas de dinero</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de video adicional con iframe responsivo -->
+    <section id="video-section" class="video-section">
+        <h2 class="section-title">Descubre Más</h2>
+        <div class="responsive-video-container">
+            <iframe class="promo-video" src="https://www.youtube.com/embed/HI40-1_wFHs" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Juego de Dinero. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el toggle menu -->
+
+    <script>
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
+const closeMenu = document.getElementById('close-menu');
+
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('menu-active');
+});
+
+closeMenu.addEventListener('click', () => {
+    navbar.classList.remove('menu-active');
+});
+const menuLinks = document.querySelectorAll('.nav-links a'); // Seleccionamos todos los enlaces del menú
+
+// Añadimos un event listener a cada enlace del menú para cerrar el menú al hacer clic
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('menu-active'); // Cierra el menú al hacer clic en cualquier enlace
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
